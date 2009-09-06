@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>{{ page.title }}</title>
+   <meta name="author" content="Charlie Groves"/>
+   <link href="http://feeds.feedburner.com/bungleton" rel="alternate" title="Bungle on, Bungleton"
+       type="application/atom+xml" />
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+</head>
+<body>
+    <div id="header">
+        <h1><a href="/">Bungle on, Bungleton</a></h1>
+        <p>The hijinks and associated pratfalls of Charlie Groves</p>
+    </div>
+    <div id="body">
+        {{ content }}
+        <h2>Contact</h2>
+        <ul id="contact">
+            <script type="text/javascript">
+                var addr = ["charlie"];
+                addr.push("groves@gmail");
+                addr.push("com");
+                addr = addr.join(".");
+                document.write('<li><a href="mailto:' + addr + '">' + addr + '</a></li>');
+            </script>
+            <li><a href="http://twitter.com/groves">twitter.com/groves</a></li>
+        </ul>
+    </div>
+</body>
+</html>

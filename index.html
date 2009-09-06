@@ -1,0 +1,39 @@
+---
+layout: default
+title: Bungle on, Bungleton
+---
+
+<h2>Posts</h2>
+<table id="posts">
+{% for post in site.posts %}
+<tr>
+    <td class="time">{{ post.date | date_to_string }}</td>
+    <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+</tr>
+{% endfor %}
+</table>
+</h2>
+  
+<h2>Projects</h2>
+<table>
+    <tr>
+        <td class="title"><a href="http://jython.org/">Jython</a></td>
+        <td>Implementation of Python for the JVM.</td>
+    </tr>
+    <tr>
+        <td class="title"><a href="http://github.com/groves/clamp/">Clamp</a></td>
+        <td>Creates Java classes from annotated Python classes.</td>
+    </tr>
+    <tr>
+        <td class="title"><a href="http://honeybird.googlecode.com/">Honeybird</a></td>
+        <td>Fluent queries in Java for Google Analytics.</td>
+    </tr>
+</table>
+
+<h2>About</h2>
+<p>I labor in the bowels of a Victorian submarine as <a
+    href="http://yppedia.puzzlepirates.com/Bungleton">Bungleton</a>, bringing to life exciting
+<a href="http://puzzlepirates.com">piratical puzzling</a> and terrifying
+<a href="http://www.flickr.com/photos/foftychel/3001934384/in/set-72157608639138033/">Halloween</a>
+<a href="http://www.flickr.com/photos/foftychel/2007037659/in/set-72157602810059059/">costumes</a>.</p>
+
