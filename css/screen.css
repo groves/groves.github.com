@@ -79,6 +79,10 @@ ol {
      list-style: none;
 }
 
+pre {
+    padding: 0 0 5px 25px;
+}
+
 tr .title, tr .time {
     float: right;
     padding: 0 5px 0 0;

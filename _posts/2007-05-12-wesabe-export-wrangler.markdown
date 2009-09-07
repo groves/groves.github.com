@@ -5,7 +5,15 @@ title: Wesabe Export Wrangler
 
 I just uploaded [gleaner.py](http://sevorg.org/wesabe/gleaner.py), a Python module to parse [Wesabe's](http://wesabe.com/) XML export and make little text reports based on their content. It really only consists of two things at this point: read_txactions(), a function that reads "accounts.xml" in the current directory and returns a list of Transaction objects, and a set of "filter functions" that operate on the Transaction objects. 
 
-The filter functions are the ones that are in all caps. So far I have TAG, MERCHANT, ACCOUNT, AFTER, BEFORE, MONTH, AND, OR and NOT. To use a filter function, you call it with what you want to match and it returns a new function that returns true when passed Transactions that meet that criteria and false for those that don't make the grade. In the example below, TAG('charlie') creates a function that returns true for any transaction that has the 'charlie' tag. MERCHANT and ACCOUNT are fairly similar to TAG. They take a piece of text and return true if a transaction's merchant is the same as that text or its account is the same respectively. AFTER and BEFORE take a day formatted like '2007-05-01' and make a filter that matches transactions after or before that date. MONTH matches any transaction in a given month. It either takes a full month like '2007-05' or just a month number like '5'. If given the second form, it assumes the month is in the current year.
+The filter functions are the ones that are in all caps. So far I have `TAG`, `MERCHANT`, `ACCOUNT`,
+`AFTER`, `BEFORE`, `MONTH`, `AND`, `OR` and `NOT`. To use a filter function, you call it with what
+you want to match and it returns a new function that returns true when passed Transactions that meet
+that criteria and false for those that don't make the grade. In the example below, `TAG('charlie')`
+creates a function that returns true for any transaction that has the 'charlie' tag. `MERCHANT` and
+`ACCOUNT` are fairly similar to `TAG`. They take a piece of text and return true if a transaction's
+merchant is the same as that text or its account is the same respectively. `AFTER` and `BEFORE` take
+a day formatted like '2007-05-01' and make a filter that matches transactions after or before that
+date. `MONTH` matches any transaction in a given month. It either takes a full month like '2007-05' or just a month number like '5'. If given the second form, it assumes the month is in the current year.
 
 An example report is probably better than actually talking through this:
 
